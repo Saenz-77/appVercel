@@ -15,9 +15,9 @@ def notificar_asesor():
     number = data.get("number")
     text = data.get("text")
 
-    url = "https://graph.facebook.com/v17.0/126262110574812/messages"
+    url = "https://graph.facebook.com/v22.0/834560259747367/messages"
     headers = {
-        'Authorization': 'Bearer TU_TOKEN_AQUI',
+        'Authorization': 'Bearer EAFd59J08Mk8BPZCIXU90KLK43VFHZB0jn4oh6pZClCfRlXsWcRNCNZBJANWEpZAZBDhrvyo81FZAIkfkxvSZB5YQJNsp4kiZAlems9b6Iy6GUbZCLZAQN4SPuDFojr2JzS1mxNZCzSdYiYo8ci2YFzb5vZAMatOmmY3yXbhud3qWkpX2p57TpXNrJK6mMjFH3juVBWSVlnwZDZD',
         'Content-Type': 'application/json'
     }
     payload = {
@@ -30,3 +30,4 @@ def notificar_asesor():
     print("📤 Enviando a WhatsApp:", payload)
     response = requests.post(url, headers=headers, data=json.dumps(payload))
     return jsonify(response.json())
+
